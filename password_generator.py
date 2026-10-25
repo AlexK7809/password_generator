@@ -8,8 +8,12 @@ stars = '*' * len(banner_message)
 print(stars)
 print(banner_message)
 print(stars)
-
-password_length = int(input('Enter Password Length: '))
+while True:
+    try:
+        password_length = int(input('Enter Password Length: '))
+        break
+    except ValueError:
+        print('Error: Enter an integer number. Try again')
 password = ''
 for letter in range(password_length):
     random_letter = random.choice(letters)
